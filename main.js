@@ -14,13 +14,14 @@ function initWindow() {
 })
 
 // Electron Build Path
-appWindow.loadURL(
-    url.format({
-    pathname: path.join(__dirname, `/dist/index.html`),
-    protocol: "file:",
-    slashes: true
-    })
-);
+// appWindow.loadURL(
+//     url.format({
+//     pathname: path.join(__dirname, `/dist/index.html`),
+//     protocol: "file:",
+//     slashes: true
+//     })
+// );
+appWindow.loadURL(`file://${__dirname}/dist/index.html`);
 
 // Initialize the DevTools.
 appWindow.webContents.openDevTools()

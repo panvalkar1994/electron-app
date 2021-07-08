@@ -2,6 +2,10 @@
   "name": "electron-app",
   "version": "0.0.0",
   "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/panvalkar1994/electron-app.git"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -9,7 +13,9 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "e": "electron .",
-    "e-build": "ng build && electron ."
+    "e-build": "ng build && electron .",
+    "e-builder": "electron-builder build --win --publish never",
+    "deploy": "electron-builder build --win --publish always"
   },
   "private": true,
   "dependencies": {
